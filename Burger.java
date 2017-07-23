@@ -1,13 +1,13 @@
 public class Burger {
-    private String name,breadRollType, meat;;
+    private String name,bunType, meat;;
     private double price;
     private String[][] additions = new String[4][4];
 
-    public Burger(String name, String meat, double price, String breadRollType){
+    public Burger(String name, String meat, double price, String bunType){
         this.name = name;
         this.meat = meat;
         this.price = price;
-        this.breadRollType = breadRollType;
+        this.bunType = bunType;
     }
 
     public void addBurgerAddtion(String name, String price,int index){
@@ -17,7 +17,7 @@ public class Burger {
 
     public double itemizeBurger(){
         double burgerPrice = this.price;
-        System.out.println(this.name + " burger " + "on a " + this.breadRollType + " roll with " + this.meat + ", price is " + this.price);
+        System.out.println(this.name + " burger " + "on a " + this.bunType + " bun with " + this.meat + ", price is " + this.price);
         for(int i = 0; i < additions.length; i++){
             if(this.additions[i][0] != null){
                 burgerPrice += Double.parseDouble(this.additions[i][1]);

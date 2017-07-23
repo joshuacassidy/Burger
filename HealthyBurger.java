@@ -5,10 +5,10 @@ public class HealthyBurger extends Burger {
     private String[][] healthyExtra = new String[2][2];
 
     public HealthyBurger(String meat, double price) {
-        super("Healthy", meat, price,"Brown rye");
+        super("Healthy", meat, price,"Whole wheat");
     }
 
-    public void addhealthyAddition(String name, String price,int index) {
+    public void addBurgerAddtion(String name, String price,int index) {
         this.healthyExtra[index][0] = name;
         this.healthyExtra[index][1] = price;
     }
