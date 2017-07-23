@@ -2,34 +2,27 @@ public class HealthyBurger extends Burger {
     private String healthyExtra1Name;
     private double healthyExtra1Price;
 
-    private String healthyExtra2Name;
-    private double healthyExtra2Price;
+    private String[][] healthyExtra = new String[2][2];
 
     public HealthyBurger(String meat, double price) {
         super("Healthy", meat, price,"Brown rye");
     }
 
-    public void addhealthyAddition1(String name, double price) {
-        this.healthyExtra1Name = name;
-        this.healthyExtra1Price = price;
-    }
-
-    public void addhealthyAddition2(String name, double price) {
-        this.healthyExtra2Name = name;
-        this.healthyExtra2Price = price;
+    public void addhealthyAddition(String name, String price,int index) {
+        this.healthyExtra[index][0] = name;
+        this.healthyExtra[index][1] = price;
     }
 
     @Override
     public double itemizeBurger() {
         double burgerPrice = super.itemizeBurger();
-        if(this.healthyExtra1Name != null){
-            burgerPrice += this.healthyExtra1Price;
-            System.out.println("Added " + this.healthyExtra1Name + " for an extra " + this.healthyExtra1Price);
+        for(int i = 0; i < healthyExtra.length; i++){
+            if(this.healthyExtra[i][0] != null){
+                burgerPrice += Double.parseDouble(this.healthyExtra[i][1]);
+                System.out.println("Added " + this.healthyExtra[i][0] + " for   an extra " + this.healthyExtra[i][1]);
         }
-        if(this.healthyExtra2Name != null){
-            burgerPrice += this.healthyExtra2Price;
-            System.out.println("Added " + this.healthyExtra2Name + " for an extra " + this.healthyExtra2Price);
         }
+        
         return burgerPrice;
     }
 }
