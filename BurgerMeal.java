@@ -1,8 +1,8 @@
 public class BurgerMeal extends Burger {
     public BurgerMeal() {
-        super("Meal", "Chicken and Bacon", 10, "White");
+        super("Meal", "Chicken and Bacon", 10.00, "White");
         super.addBurgerAddtion("Chips","2.22",0);
-        super.addBurgerAddtion("Drink","2.22",1);
+        super.addBurgerAddtion("Drink","2.00",1);
     }
 
     @Override

@@ -19,8 +19,8 @@ public class HealthyBurger extends Burger {
         for(int i = 0; i < healthyExtra.length; i++){
             if(this.healthyExtra[i][0] != null){
                 burgerPrice += Double.parseDouble(this.healthyExtra[i][1]);
-                System.out.println("Added " + this.healthyExtra[i][0] + " for   an extra " + this.healthyExtra[i][1]);
-        }
+                System.out.printf("Added %s for an extra %s\n",this.healthyExtra[i][0],this.healthyExtra[i][1]);
+            }
         }
         
         return burgerPrice;
